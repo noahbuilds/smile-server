@@ -1,6 +1,7 @@
-## 🚀 Smile ID Liveness Detection Backend (TypeScript)
 
-A scalable and production-ready Node.js backend (written in TypeScript) for integrating Smile Identity's **Liveness Detection** using their [\`smile-identity-core\`](https://www.npmjs.com/package/smile-identity-core) SDK.
+# 🚀 Smile ID Liveness Detection Backend (TypeScript)
+
+A scalable and production-ready Node.js backend (written in TypeScript) for integrating Smile Identity's **Liveness Detection** using their [`smile-identity-core`](https://www.npmjs.com/package/smile-identity-core) SDK.
 
 ---
 
@@ -17,40 +18,40 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 
 ## 🔧 Features
 
-- ✅ Selfie + Liveness image capture submission (\`job_type: 4\`)
+- ✅ Selfie + Liveness image capture submission (`job_type: 4`)
 - ✅ Secure backend to protect Smile ID credentials
 - ✅ Scalable folder structure (config, routes, services, controllers)
 - ✅ Centralized error handling
-- ✅ Environment-based config (\`sandbox\` or \`production\`)
+- ✅ Environment-based config (`sandbox` or `production`)
 
 ---
 
 ## 📁 Project Structure
 
-
+```
 /src
 │
-├── app.ts # Express app config
-├── server.ts # Entry point
+├── app.ts               # Express app config
+├── server.ts            # Entry point
 │
 ├── config/
-│ └── smile.config.ts # Smile ID env vars
+│   └── smile.config.ts  # Smile ID env vars
 │
 ├── controllers/
-│ └── liveness.controller.ts # Handles incoming requests
+│   └── liveness.controller.ts  # Handles incoming requests
 │
 ├── services/
-│ └── smile.service.ts # Business logic for Smile ID API
+│   └── smile.service.ts        # Business logic for Smile ID API
 │
 ├── routes/
-│ └── liveness.routes.ts # API route definitions
+│   └── liveness.routes.ts      # API route definitions
 │
 ├── middlewares/
-│ └── error.middleware.ts # Global error handler
+│   └── error.middleware.ts     # Global error handler
 │
 └── utils/
-└── logger.ts # (Optional) Central logging utils
-
+    └── logger.ts               # (Optional) Central logging utils
+```
 
 ---
 
@@ -58,33 +59,33 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 
 ### 1. Clone the repo
 
-`bash
+```bash
 git clone https://github.com/yourname/smileid-backend.git
 cd smileid-backend
-`
+```
 
 ### 2. Install dependencies
 
-`bash
+```bash
 npm install
-`
+```
 
 ### 3. Configure environment variables
 
-Create a \`.env\` file in the root:
+Create a `.env` file in the root directory:
 
-`env
+```env
 PORT=3000
 SMILE_PARTNER_ID=your_partner_id
 SMILE_API_KEY=your_api_key
 SMILE_ENVIRONMENT=sandbox
-`
+```
 
 ### 4. Run the development server
 
-`bash
+```bash
 npm run dev
-`
+```
 
 ---
 
@@ -92,37 +93,41 @@ npm run dev
 
 ### Endpoint
 
-\`\`\`
+```http
 POST /api/liveness
-\`\`\`
+```
 
 ### Request Body
 
-`json
+```json
 {
-"images": [ {image: "base64string", "image_type_id": 0},{image: "base64string", "image_type_id": 1}],
-"meta": {
-"libraryVersion": "10.0.3"
+  "images": [
+    { "image": "base64string", "image_type_id": 0 },
+    { "image": "base64string", "image_type_id": 1 }
+  ],
+  "meta": {
+    "libraryVersion": "10.0.3"
+  }
 }
-}
-`
+```
 
 ### Example Response
 
-`json
+```json
 {
-"job_complete": true,
-"job_success": true,
-"timestamp": "2025-07-17T13:39:43.661Z",
-"confidence": "99",
-"selfie_check": "Passed",
-"liveness_check": "Passed",
-"register_selfie": "Passed",
-"result_code": "0840",
-"result_text": "Enroll User",
-"result_type": "SAIA",
-"is_final_result": "true"
-}`
+  "job_complete": true,
+  "job_success": true,
+  "timestamp": "2025-07-17T13:39:43.661Z",
+  "confidence": "99",
+  "selfie_check": "Passed",
+  "liveness_check": "Passed",
+  "register_selfie": "Passed",
+  "result_code": "0840",
+  "result_text": "Enroll User",
+  "result_type": "SAIA",
+  "is_final_result": "true"
+}
+```
 
 ---
 
