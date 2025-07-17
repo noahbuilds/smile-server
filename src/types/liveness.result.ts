@@ -1,4 +1,4 @@
-interface LivenessJobResult {
+export interface LivenessJobResult {
     job_complete: boolean;
     job_success: boolean;
     timestamp: string;

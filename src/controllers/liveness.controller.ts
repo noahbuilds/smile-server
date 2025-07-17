@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { submitLivenessJob } from "../services/smile.service";
+import { LivenessJobResult } from "../types/liveness.result";
 
 export const handleLiveness = async (
   req: Request,
