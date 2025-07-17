@@ -27,7 +27,7 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 
 ## 📁 Project Structure
 
-\`\`\`
+
 /src
 │
 ├── app.ts # Express app config
@@ -50,7 +50,7 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 │
 └── utils/
 └── logger.ts # (Optional) Central logging utils
-\`\`\`
+
 
 ---
 
@@ -58,33 +58,33 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 
 ### 1. Clone the repo
 
-\`\`\`bash
+`bash
 git clone https://github.com/yourname/smileid-backend.git
 cd smileid-backend
-\`\`\`
+`
 
 ### 2. Install dependencies
 
-\`\`\`bash
+`bash
 npm install
-\`\`\`
+`
 
 ### 3. Configure environment variables
 
 Create a \`.env\` file in the root:
 
-\`\`\`env
+`env
 PORT=3000
 SMILE_PARTNER_ID=your_partner_id
 SMILE_API_KEY=your_api_key
 SMILE_ENVIRONMENT=sandbox
-\`\`\`
+`
 
 ### 4. Run the development server
 
-\`\`\`bash
+`bash
 npm run dev
-\`\`\`
+`
 
 ---
 
@@ -98,18 +98,18 @@ POST /api/liveness
 
 ### Request Body
 
-\`\`\`json
+`json
 {
 "images": [ {image: "base64string", "image_type_id": 0},{image: "base64string", "image_type_id": 1}],
 "meta": {
 "libraryVersion": "10.0.3"
 }
 }
-\`\`\`
+`
 
 ### Example Response
 
-\`\`\`json
+`json
 {
 "job_complete": true,
 "job_success": true,
@@ -122,8 +122,7 @@ POST /api/liveness
 "result_text": "Enroll User",
 "result_type": "SAIA",
 "is_final_result": "true"
-}
-\`\`\`
+}`
 
 ---
 
@@ -157,4 +156,3 @@ MIT — © [Smile Identity](https://usesmileid.com/legal/terms-and-conditions)
 
 - Smile ID Developer Docs: [https://docs.usesmileid.com](https://docs.usesmileid.com)
 - Need help? [Open an issue](https://github.com)
-  `;
