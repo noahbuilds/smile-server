@@ -94,7 +94,7 @@ npm run dev
 ### Endpoint
 
 ```http
-POST /api/liveness
+POST /api/v1/liveness
 ```
 
 ### Request Body
