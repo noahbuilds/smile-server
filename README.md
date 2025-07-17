@@ -60,8 +60,8 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourname/smileid-backend.git
-cd smileid-backend
+git clone https://github.com/yourname/smile-server.git
+cd smile-server
 ```
 
 ### 2. Install dependencies
