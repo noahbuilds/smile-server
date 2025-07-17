@@ -60,7 +60,7 @@ A scalable and production-ready Node.js backend (written in TypeScript) for inte
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourname/smile-server.git
+git clone https://github.com/noahbuilds/smile-server.git
 cd smile-server
 ```
 
