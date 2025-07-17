@@ -100,7 +100,7 @@ POST /api/liveness
 
 \`\`\`json
 {
-"images": [ {image: "base64string"},{image: "base64string"}],
+"images": [ {image: "base64string", "image_type_id": 0},{image: "base64string", "image_type_id": 1}],
 "meta": {
 "libraryVersion": "10.0.3"
 }
