@@ -9,4 +9,7 @@ app.use(cors());
 app.use(express.json({ limit: "5mb" }));
 
 app.use("/api/v1/liveness", livenessRoutes);
+app.get("*", (req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
 app.use(errorHandler);
